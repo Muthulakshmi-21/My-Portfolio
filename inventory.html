@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventory Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #17a2b8;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li a {
+      position: relative;
+      text-decoration: none;
+      color: #333;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 8px 4px;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background-color: #17a2b8;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links li a:hover {
+      color: #17a2b8;
+    }
+
+    main {
+      padding: 50px 40px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 80px;
+      align-items: flex-start;
+    }
+
+    .left-content {
+      flex: 1;
+      max-width: 42%;
+      margin-left: 30px;
+    }
+
+    .right-content {
+      flex: 1;
+      max-width: 50%;
+      margin-right: 30px;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #0097a7; /* Changed to teal */
+      margin-bottom: 20px;
+    }
+
+    .project-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .project-image:hover {
+      transform: scale(1.02);
+    }
+
+    .links {
+      margin-top: 20px;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 15px;
+      margin-top: 10px;
+      text-decoration: none;
+      background-color: #0097a7; /* Teal button */
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .links a:hover {
+      background-color: #007c90; /* Darker teal on hover */
+    }
+
+    .right-content h3 {
+      font-size: 20px;
+      margin-top: 25px;
+      color: #444;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .left-content, .right-content {
+        max-width: 100%;
+        margin: 0;
+      }
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      margin: 2% auto;
+      display: block;
+      width: 100%;
+      max-width: 1400px;
+      height: auto;
+      max-height: 1000vh;
+      border-radius: 8px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #ccc;
+    }
+
+    @media screen and (max-width: 768px) {
+      .modal-content {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Muthulakshmi</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About Me</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <!-- Left -->
+      <div class="left-content">
+        <h1>Inventory & Sales Analysis Dashboard</h1>
+        <img src="images/inventory.JPG" alt="Inventory Dashboard" class="project-image" id="mainImg">
+        <div class="links">
+          
+          <a href="https://github.com/Muthulakshmi-21/Inventory-Analysis" target="_blank">💻 GitHub Code</a>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="right-content">
+        <h3>Tools Used:</h3>
+        <p>Excel</p>
+
+        <h3>Introduction:</h3>
+        <p>This dashboard provides a bird’s-eye view of inventory movement, order status, warehouse sales, and customer purchase trends. It's designed for operations managers to make informed decisions around stocking, fulfillment, and product strategy.</p>
+
+        <h3>Objectives:</h3>
+        <ul>
+          <li>Track inventory status across multiple categories and warehouses</li>
+          <li>Identify top-selling products and highest-spending customers</li>
+          <li>Analyze fulfillment performance (shipped, pending, canceled)</li>
+          <li>Measure year-over-year sales growth and warehouse performance</li>
+        </ul>
+
+        <h3>Key Insights:</h3>
+        <ul>
+          <li>Storage-related products were the most sold items, indicating high market demand</li>
+          <li>A select few customers contributed significantly to overall revenue</li>
+          <li>One warehouse clearly outperformed others in both volume and value</li>
+          <li>Order fulfillment was largely successful with most orders marked as shipped</li>
+          <li>Sales consistently grew over multiple years, reflecting steady business expansion</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="imgModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <!-- Script for Modal -->
+  <script>
+    const modal = document.getElementById("imgModal");
+    const img = document.getElementById("mainImg");
+    const modalImg = document.getElementById("modalImg");
+
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        closeModal();
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muthulakshmi - Data Analyst Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Muthulakshmi</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <!-- Placeholder Sections -->
+  <!-- Home Section -->
+  <section id="home" class="home-section">
+  <div class="home-content">
+    <h1>Hi, I'm <span class="highlight">Muthulakshmi</span></h1>
+    <h2>Data Analyst</h2>
+    <p>Turning raw data into powerful insights to drive smarter decisions.</p>
+  </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="about-section">
+  <div class="about-grid">
+
+    <!-- About Me -->
+    <div class="about-left">
+      <h2>About Me</h2>
+      <p>
+        I'm <span class="highlight-name">Muthulakshmi</span>, an enthusiastic and detail-oriented aspiring 
+        <span class="highlight-role">Data Analyst</span> with a strong foundation in statistics, data visualization, and data-driven decision making. 
+        I’ve completed academic projects and industry-relevant certifications that deepened my passion for uncovering insights from data.
+      </p>
+      <p>
+        Skilled in <span class="highlight-tool">Excel</span>, <span class="highlight-tool">SQL</span>, 
+        <span class="highlight-tool">Python</span>, and <span class="highlight-tool">Power BI</span>, I enjoy transforming complex data into clear, actionable insights. 
+        I believe that effective analysis is not just about numbers, but about solving problems and driving meaningful outcomes.
+      </p>
+      <p>
+        I'm a quick learner with a curious mindset and a strong commitment to continuous improvement. 
+        I’ve also collaborated on small team projects where I contributed to data cleaning, analysis, and reporting.
+      </p>
+      <p>
+        I'm actively seeking opportunities where I can apply my skills, grow in a collaborative environment, and contribute to solving real-world problems through data.
+      </p>
+      <p>
+        Looking forward to contributing with curiosity, dedication, and a passion for data!
+      </p>
+    </div>
+
+    <!-- Educational Background -->
+    <div class="about-right">
+      <h2>Educational Background</h2>
+
+      <div class="edu-card">
+        <div class="edu-header">
+          <h3>Master of Computer Science</h3>
+          <span class="edu-year">2022 – 2024</span>
+        </div>
+        <p>Manonmaniam Sundaranar University</p>
+        <p><strong>CGPA:</strong> 8.5 / 10</p>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-header">
+          <h3>Bachelor of Computer Science</h3>
+          <span class="edu-year">2019 – 2022</span>
+        </div>
+        <p>Manonmaniam Sundaranar University</p>
+        <p><strong>CGPA:</strong> 8.8 / 10</p>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <img src="images/excel.png" alt="Excel">
+      <p>Excel</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="images/sql.png" alt="SQL">
+      <p>SQL</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="images/python.png" alt="Python">
+      <p>Python</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="images/powerbi.png" alt="Power BI">
+      <p>Power BI</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="images/pandas.png" alt="Pandas">
+      <p>Pandas</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="images/matplotlib.png" alt="Matplotlib">
+      <p>Matplotlib</p>
+    </div>
+
+  </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+  <h2 class="section-title">Experience</h2>
+
+  <h3><strong>Data Analyst Intern</strong></h3>
+  <p class="duration">February 2025 – Present</p>
+
+  <p>
+    I'm currently interning at Ramchin Technologies Private Limited, where I'm honing my skills in real-world data analysis and dashboard development.
+    During this internship, I’ve gained hands-on experience in using tools like Excel, Power BI, and SQL for cleaning, analyzing, and visualizing data.
+  </p>
+
+  <p>Projects I’ve worked on include:</p>
+  <ul>
+    <li>Blinkit sales analysis – Explored customer behavior and sales performance to uncover patterns and insights for business optimization.</li>
+    <li>Marketing and sales performance analysis – Evaluated campaign performance and sales data to support strategic decision-making.</li>
+    <li>Shopify sales analysis – Monitored and interpreted e-commerce data to identify trends, best-selling products, and revenue drivers.</li>
+    <li>Inventory dashboard – Designed an interactive dashboard to track inventory movement, stock levels, and reorder points.</li>
+  </ul>
+
+  <p>
+    This internship has strengthened my analytical thinking, problem-solving ability, and dashboard storytelling skills, preparing me to take on more challenging roles in the data analytics field.
+  </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <img src="images/blinkit.jpg" alt="Blinkit Sales Analysis">
+      <a href="blinkit.html" class="project-title">Blinkit Sales Analysis</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/marketing.jpg" alt="Marketing & Sales Analysis">
+      <a href="marketing.html" class="project-title">Marketing & Sales Analysis</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/shopify.jpg" alt="Shopify Sales Analysis">
+      <a href="shopify.html" class="project-title">Shopify Sales Analysis</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/inventory.jpg" alt="Inventory Dashboard">
+      <a href="inventory.html" class="project-title">Inventory Dashboard</a>
+    </div>
+
+  </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+  <h2 class="section-title">Get in Touch</h2>
+
+  <div class="contact-cards-vertical">
+    <div class="contact-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email Icon" />
+      <p><a href="mailto:muthulakshmip026@example.com">Let’s Talk</a></p>
+    </div>
+
+    <div class="contact-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon" />
+      <p><a href="https://www.linkedin.com/in/muthulakshmi-p-2ab136276/" target="_blank">Connect on LinkedIn</a></p>
+    </div>
+
+    <div class="contact-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Icon" />
+      <p><a href="https://github.com/Muthulakshmi-21" target="_blank">Explore My Code</a></p>
+    </div>
+  </div>
+
+  <p class="closing-message">Feel free to connect with me!</p>
+  </section>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
